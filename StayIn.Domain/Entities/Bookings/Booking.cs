@@ -1,5 +1,6 @@
 ﻿using StayIn.Domain.Abstractions;
 using StayIn.Domain.Entities.Apartments;
+using StayIn.Domain.Entities.Bookings;
 using StayIn.Domain.Entities.Bookings.Events;
 using StayIn.Domain.Shared;
 using static StayIn.Domain.Shared.Enums;
@@ -71,7 +72,7 @@ public class Booking : Entity
     {
         if (Status != BookingStatus.Reserved)
         {
-            return Result.Failure(BookingErrors.NotPending);
+            return Result.Failure(BookingErrors.NotReserved);
         }
 
         Status = BookingStatus.Confirmed;
@@ -84,7 +85,7 @@ public class Booking : Entity
     {
         if (Status != BookingStatus.Reserved)
         {
-            return Result.Failure(BookingErrors.NotPending);
+            return Result.Failure(BookingErrors.NotReserved);
         }
 
         Status = BookingStatus.Rejected;

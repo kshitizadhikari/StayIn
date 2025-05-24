@@ -9,11 +9,4 @@ public class Enums
         Cancelled = 4,
         Completed = 5
     }
-    public enum BookingErrors
-    {
-        NotPending = 1,
-        NotReserved = 2,
-        NotConfirmed = 3,
-        AlreadyStarted = 4
-    }
 }
