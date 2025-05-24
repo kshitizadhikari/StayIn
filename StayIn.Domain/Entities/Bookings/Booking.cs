@@ -71,7 +71,7 @@ public class Booking : Entity
     {
         if (Status != BookingStatus.Reserved)
         {
-            return Result.Failue(BookingErrors.NotPending);
+            return Result.Failure(BookingErrors.NotPending);
         }
 
         Status = BookingStatus.Confirmed;
@@ -84,7 +84,7 @@ public class Booking : Entity
     {
         if (Status != BookingStatus.Reserved)
         {
-            return Result.Failue(BookingErrors.NotPending);
+            return Result.Failure(BookingErrors.NotPending);
         }
 
         Status = BookingStatus.Rejected;
@@ -103,7 +103,7 @@ public class Booking : Entity
         var currentDate = DateOnly.FromDateTime(utcNow);
         if (currentDate > Duration.Start)
         {
-            return Result.Failure(Enums.BookingErrors.AlreadyStarted);
+            return Result.Failure(BookingErrors.AlreadyStarted);
         }
 
         Status = BookingStatus.Cancelled;
@@ -116,7 +116,7 @@ public class Booking : Entity
     {
         if (Status != BookingStatus.Confirmed)
         {
-            return Result.Failue(BookingErrors.NotConfirmed);
+            return Result.Failure(BookingErrors.NotConfirmed);
         }
 
         Status = BookingStatus.Completed;
