@@ -1,4 +1,4 @@
-﻿namespace StayIn.Domain.Entities.Apartment;
+﻿namespace StayIn.Domain.Shared;
 public record Currency
 {
     internal static readonly Currency None = new("");

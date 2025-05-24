@@ -1,4 +1,4 @@
-﻿namespace StayIn.Domain.Entities.Apartment;
+﻿namespace StayIn.Domain.Entities.Apartments;
 public record Address(
     string Country,
     string State,

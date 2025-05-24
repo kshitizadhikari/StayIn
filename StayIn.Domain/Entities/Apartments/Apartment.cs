@@ -1,6 +1,7 @@
 ﻿using StayIn.Domain.Abstractions;
+using StayIn.Domain.Shared;
 
-namespace StayIn.Domain.Entities.Apartment;
+namespace StayIn.Domain.Entities.Apartments;
 public sealed class Apartment : Entity
 {
     public Apartment(

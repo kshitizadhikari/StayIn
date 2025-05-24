@@ -1,6 +1,6 @@
 ﻿using StayIn.Domain.Abstractions;
 
-namespace StayIn.Domain.Entities.Apartment;
+namespace StayIn.Domain.Entities.Apartments;
 public interface IApartmentRepository : IBaseRepository<Apartment>
 {
 }
